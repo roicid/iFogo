@@ -9,7 +9,7 @@ var logger = require('morgan');
 const mongoose = require("mongoose");
 
 mongoose
-  .connect("mongodb://localhost/basic-auth", {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
