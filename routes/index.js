@@ -1,13 +1,10 @@
 var express = require('express');
 var router = express.Router();
-const restaurantes =require('../models/restaurantes')
+//const restaurantes =require('../models/restaurantes')
 const withAuth = require('../helpers/middleware')
 
-/* GET home page. */
-router.get('/', withAuth, (req, res, next) => {
-  res.render('home') 
-})
-  /*restaurantes.find()
+
+/*restaurantes.find()
   .then((restaurantes) => {
     console.log(restaurantes)
   }).catch((err) => {
@@ -15,5 +12,13 @@ router.get('/', withAuth, (req, res, next) => {
   });
 
 
-*/
+
+/* GET home page. */
+router.get('/', withAuth, (req, res, next) => {
+  res.render('home') 
+})
+ 
+
+
+
 module.exports = router;
