@@ -21,7 +21,7 @@ mongoose
   .catch((err) => {
     console.error("Error connecting to mongo", err);
   });
-
+//hola 
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 
