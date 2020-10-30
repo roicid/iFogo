@@ -26,4 +26,4 @@ readme.md
  ### Poder conectar algun maps para mostrar los restaurantes en un mapa 
 
 
-![alt text](public\images\wireframes-iFoGo.jpg "Logo Title Text 1")
+![alt text](C:\Users\MSI\Desktop\iFogo-readme\public\images\wireframes-iFoGo.jpg "Logo Title Text 1")
