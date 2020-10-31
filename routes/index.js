@@ -9,8 +9,11 @@ const withAuth = require('../helpers/middleware')
     console.log(restaurantes)
   }).catch((err) => {
     console.log(err)
-  });
+  });*/ 
 
+  router.get('/' , (req,res,next) => {
+    res.render('index')
+  })
 
 
 /* GET home page. */
