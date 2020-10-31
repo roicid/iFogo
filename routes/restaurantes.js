@@ -4,10 +4,10 @@ const restaurantes =require('../models/restaurantes')
 const withAuth = require('../helpers/middleware');
 
 
-router.get('/buscadorPrincipal:/id' ,(req , res , next ) => {
-        restaurantes.find(req.query.search)
+router.get('/buscadorPrincipal' ,(req , res , next ) => {
+        restaurantes.find()
         .then((result) => {
-            console.log(result.body.nombre[0])
+            console.log(result);
         }).catch((err) => {
             console.log(err)
         });
