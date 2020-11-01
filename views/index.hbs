@@ -6,7 +6,11 @@
 
 <form id ="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
 
-<label for="buscador">          </label>
+<label for="buscador"></label>
 <input type="text" name ="buscador" value="" id=""> 
 <button class="boton-Buscador"> Buscar </button>
  </form>
+
+ {{#each data}}
+    <p>{{this.Email}}</p>
+ {{/each}}
