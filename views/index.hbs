@@ -10,3 +10,16 @@
 <input type="text" name ="buscador" value="" id=""> 
 <button class="boton-Buscador"> Buscar </button>
  </form>
+
+ <div > {{#each data}}   
+
+     <p> {{this.Nombre}}</p>
+     <img src ="{{this.[Foto 1]}}"> 
+     <img src ="{{this.[Foto 2]}}">
+     <p> {{this.Municipio}}</p>
+
+     
+{{/each }}
+      
+ </div>
+  
