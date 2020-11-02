@@ -13,8 +13,8 @@ router.get('/buscadorPrincipal' , async (req , res , next ) => {
         
         try {
             const consulta = await Restaurante.find({Nombre : {$regex: req.query.buscador, $options:"i"}});
-            console.log(req.query.buscador)
-            console.log(consulta);
+            //console.log(req.query.buscador)
+           // console.log(consulta);
             res.render('index' , {data : consulta} )
            
         
