@@ -1,4 +1,3 @@
-const { url } = require('inspector');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -16,6 +15,6 @@ const restauranteSchema = new Schema(
   }
 );
 
-const Restaurante = mongoose.model('Restaurantes', restauranteSchema);
+const Restaurante = mongoose.model('Restaurante', restauranteSchema);
 
 module.exports = Restaurante;

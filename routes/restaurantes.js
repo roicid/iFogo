@@ -32,7 +32,6 @@ router.post("/restaurantesform", (req, res, next) => {
   try {
     const resta = new restaurantes(nombre, direccion, url, Foto);
     resta.save(resta);
-
     res.redirect("/index");
   } catch (error) {
     console.log(error);
