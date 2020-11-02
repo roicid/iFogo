@@ -87,7 +87,7 @@ router.post("/login", async (req, res, next) => {
       const payload = { userWithoutPass };
       // creamos el token usando el método sign, el string de secret session y el expiring time
       const token = jwt.sign(payload, process.env.SECRET_SESSION, {
-        expiresIn: "1h"
+        expiresIn: "1h",
       });
       // enviamos en la respuesta una cookie con el token y luego redirigimos a la home
       res.cookie("token", token, { httpOnly: true });

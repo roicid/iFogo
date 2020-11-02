@@ -1,28 +1,27 @@
+<p> Bienvenido A iFogo </p>
 
-<p> Bienvenido  A iFogo </p>
-
-<p> La aplicacion de Food-to-Go que tanto buscabas  </p> 
+<p> La aplicacion de Food-to-Go que tanto buscabas </p>
 
 
-<form id ="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
+<form id="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
 
-<label for="buscador">          </label>
-<input type="text" name ="buscador" value="" id="buscador"> 
-<button class="boton-Buscador"> Buscar </button>
- </form>
+    <label for="buscador"> </label>
+    <input type="text" name="buscador" value="" id="buscador">
+    <button class="boton-Buscador"> Buscar </button>
+</form>
 
- <div> {{#each data}}   
+<div> {{#each data}}
 
-     <p> Nombre :  {{this.Nombre}}</p>
-     <img src="{{this.[Foto1]}}"> 
-     <img src="{{this.[Foto2]}}">
-     <p> Mail :  {{this.Email}}</p>
-     <p> direccion : {{this.Direccion}} </p>
+    <p> Nombre : {{this.Nombre}}</p>
+    <img src="{{this.[Foto1]}}">
+    <img src="{{this.[Foto2]}}">
+    <p> Mail : {{this.Email}}</p>
+    <p> direccion : {{this.Direccion}} </p>
 
-     
-{{/each }}
-      
- </div>
 
- <h2>   Vendes comida Take Away  y deseas Colaborar ? </h2>
-  <a href="./restaurantes"> haz click aqui</a> 
+    {{/each }}
+
+</div>
+
+<h2> Vendes comida Take Away y deseas Colaborar ? </h2>
+<a href="./restaurantes"> haz click aqui</a>
