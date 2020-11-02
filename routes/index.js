@@ -4,12 +4,6 @@ const restaurantes = require("../models/restaurantes");
 const withAuth = require("../helpers/middleware");
 const uploadCloud = require("../config/cloudinary");
 
-/*restaurantes.find()
-  .then((restaurantes) => {
-    console.log(restaurantes)
-  }).catch((err) => {
-    console.log(err)
-  });*/
 
 router.get("/", (req, res, next) => {
   res.render("index");
