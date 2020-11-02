@@ -13,7 +13,7 @@ router.get("/buscadorPrincipal", async (req, res, next) => {
   try {
     const consulta = await Restaurante.find({
       Nombre: { $regex: req.query.buscador, $options: "i" },
-    });
+    }).limit(5);
     //console.log(req.query.buscador)
     // console.log(consulta);
     res.render("index", { data: consulta });
@@ -52,7 +52,29 @@ router.post(
     } catch (error) {
       console.log(error);
     }
+<<<<<<< HEAD
   }
 );
+=======
+})
+
+router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
+
+    const { Nombre , Direccion , URLReal , Email} = req.body;
+    const Foto1  = req.file.url
+    const imgName = req.file.originalname;
+    
+
+try { 
+     const nuevoRestaurante = await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email, imgName})
+    res.render('bienvenidoRestaurante' , {nuevoRestaurante});
+} catch (error) {
+    console.log(error)
+    
+}
+})
+
+
+>>>>>>> master
 
 module.exports = router;

@@ -1,11 +1,16 @@
+<p> Bienvenido A iFogo </p>
 
-<p> Bienvenido  A iFogo </p>
-
-<p> La aplicacion de Food-to-Go que tanto buscabas  </p> 
+<p> La aplicacion de Food-to-Go que tanto buscabas </p>
 
 
-<form id ="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
+<form id="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
 
+    <label for="buscador"> </label>
+    <input type="text" name="buscador" value="" id="buscador">
+    <button class="boton-Buscador"> Buscar </button>
+</form>
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <label for="buscador"></label>
@@ -20,19 +25,20 @@
 >>>>>>> rama-alex
 <button class="boton-Buscador"> Buscar </button>
  </form>
+=======
+<div class="restaurantesTotal"> 
+     {{#each data}}
+   <div class="individual">
+>>>>>>> rama-alex
 
- <div> {{#each data}}   
+    <p class="nombre"> Nombre : {{this.Nombre}}</p>
+    <img src="{{this.[Foto1]}}" class="imageone">
+    <img src="{{this.[Foto2]}}" class="imagetwo">
+    <p class="email"> Mail : {{this.Email}}</p>
+    <p class="direccion"> direccion : {{this.Direccion}} </p>
+</div> 
+ {{/each }}
+</div>
 
-     <p> Nombre :  {{this.Nombre}}</p>
-     <img src="{{this.[Foto1]}}"> 
-     <img src="{{this.[Foto2]}}">
-     <p> Mail :  {{this.Email}}</p>
-     <p> direccion : {{this.Direccion}} </p>
-
-     
-{{/each }}
-      
- </div>
-
- <h2>   Vendes comida Take Away  y deseas Colaborar ? </h2>
-  <a href="./restaurantes"> haz click aqui</a> 
+<h2> Vendes comida Take Away y deseas Colaborar ? </h2>
+<a href="./restaurantes"> haz click aqui</a>

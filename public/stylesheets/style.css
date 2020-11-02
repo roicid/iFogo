@@ -7,8 +7,8 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #DFDECA;
 }
-
 a {
   color: #00b7ff;
 }
@@ -94,4 +94,21 @@ nav .wrapper a:hover{
 
 .container{
   margin: 50px;
+}
+
+/* NOSOTROS */
+.restaurantes{
+ 
+}
+.individual{
+  border: 1px solid black;
+  padding: 2%;
+  margin: 2%;
+  width: 50%;
+}
+.imageone{
+  width: 80%;
+}
+.imagetwo{
+  width: 10%;
 }
