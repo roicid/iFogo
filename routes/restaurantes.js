@@ -51,8 +51,6 @@ router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next
 
 try { 
      const nuevoRestaurante = await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email, imgName})
-    
-    
     res.render('bienvenidoRestaurante' , {nuevoRestaurante})
 } catch (error) {
     console.log(error)
