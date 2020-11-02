@@ -9,36 +9,6 @@ const uploadCloud = require("../config/cloudinary");
 
 router.get("/buscadorPrincipal", async (req, res, next) => {
   //  const {Nombre , Direccion} = req.body
-<<<<<<< HEAD
-      
-        
-        try {
-            const consulta = await Restaurante.find({Nombre : {$regex: req.query.buscador, $options:"i"}});
-            console.log(req.query.buscador)
-            console.log(consulta);
-            res.render('index' , {data : consulta} )
-           
-        
-            
-        } catch (error) {
-            console.log(error)
-            
-        }
-          
-    
-<<<<<<< HEAD
-            res.render('index' , {data : result} )
-           console.log(result);
-        }).catch((err) => {
-            console.log(err)
-        });
->>>>>>> d0a24d45f18a28cfc0fc6da57ff23bce7763ac32
-=======
-            
->>>>>>> master
-
-=======
->>>>>>> rama-alex
 
   try {
     const consulta = await Restaurante.find({
