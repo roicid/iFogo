@@ -3,11 +3,13 @@ const Schema = mongoose.Schema;
 
 const restauranteSchema = new Schema(
   {
+    
     Nombre: String,
-    Dirección: String,
+    Direccion: String,
     Email: String,
-    Foto_1: String,
-    Foto_2: String,
+    Foto1: String,
+    URLReal:String
+    
 
   },
   {
