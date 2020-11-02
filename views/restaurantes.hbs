@@ -1,0 +1,27 @@
+<p>   Vendes Comida Take Away  y deseas colaborar? </p>
+<h3> Sube tu negocio a nuestra Base de Datos y preparate! </h3>
+ 
+
+<form action="/restaurantes" method="POST" id="formRestaurantes" >
+    <label for="nombre">Nombre </label>
+    <input type="text" name="nombre">
+
+    <label for="direccion">direccion</label>
+    <input type="text" name="direccion"> 
+
+    <label for ="url"> PAGINA WEB? </label>
+    <input type="url" name ="url" placeholder="www.example.com" > 
+
+    <label for="fotos" > Subir una Foto</label>
+    <input type ="file"name="Foto" accept="image/png, image/jpeg" >
+
+    
+
+    <button>Subir Datos</button>
+
+    {{#if errorMessage }}
+    <div class="error-message">{{ errorMessage }}</div>
+    {{/if}}
+
+
+</form>
