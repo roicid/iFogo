@@ -13,7 +13,7 @@ router.get("/buscadorPrincipal", async (req, res, next) => {
   try {
     const consulta = await Restaurante.find({
       Nombre: { $regex: req.query.buscador, $options: "i" },
-    });
+    }).limit(5);
     //console.log(req.query.buscador)
     // console.log(consulta);
     res.render("index", { data: consulta });
