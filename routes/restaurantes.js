@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const restaurantes =require('../models/restaurantes')
+const Restaurante =require('../models/restaurantes')
 const withAuth = require('../helpers/middleware');
 
 // consultar a dani para mostrar varios !! 
@@ -33,17 +33,17 @@ router.get('/restaurantes' ,(req , res , next) => {
     }
 })
 
-router.post('/restaurantesform', (req,res,next) => {
+router.post('/restaurantesform', async(req,res,next) =>  {
 
-    const { nombre , direccion , url , Foto} = req.body;
+    const { Nombre , Direccion , URLReal , Foto1 , Email} = req.body;
 
 try { 
-    const resta = new restaurantes(nombre,direccion,url,Foto)
-    resta.save(resta)
+     await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email})
     
-    res.redirect('/index')
+    
+    res.redirect('/')
 } catch (error) {
-    console.log(error )
+    console.log(error)
     
 }
 })

@@ -1,14 +1,16 @@
-const { url } = require('inspector');
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const restauranteSchema = new Schema(
   {
+    
     Nombre: String,
-    Dirección: String,
+    Direccion: String,
     Email: String,
-    Foto_1: String,
-    Foto_2: String,
+    Foto1: String,
+    URLReal:String
+    
 
   },
   {
@@ -16,6 +18,6 @@ const restauranteSchema = new Schema(
   }
 );
 
-const Restaurante = mongoose.model('Restaurantes', restauranteSchema);
+const Restaurante = mongoose.model('Restaurante', restauranteSchema);
 
 module.exports = Restaurante;
