@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const Restaurante =require('../models/restaurantes')
 const withAuth = require('../helpers/middleware');
+const uploadCloud = require('../config/cloudinary')
 
 // consultar a dani para mostrar varios !! 
 //problemas con el json 
@@ -11,6 +12,7 @@ router.get('/buscadorPrincipal' , async (req , res , next ) => {
   //  const {Nombre , Direccion} = req.body
       
         
+
         try {
             const consulta = await Restaurante.find({Nombre : {$regex: req.query.buscador, $options:"i"}});
             //console.log(req.query.buscador)
@@ -40,15 +42,18 @@ router.get('/restaurantes' ,(req , res , next) => {
     }
 })
 
-router.post('/restaurantesform', async(req,res,next) =>  {
+router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 
-    const { Nombre , Direccion , URLReal , Foto1 , Email} = req.body;
+    const { Nombre , Direccion , URLReal , Email} = req.body;
+    const Foto1  = req.file.url
+    const imgName = req.file.originalname;
+    
 
 try { 
-     await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email})
+     const nuevoRestaurante = await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email, imgName})
     
     
-    res.redirect('/')
+    res.render('bienvenidoRestaurante' , {nuevoRestaurante})
 } catch (error) {
     console.log(error)
     
