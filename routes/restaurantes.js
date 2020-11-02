@@ -24,6 +24,22 @@ router.get('/buscadorPrincipal' ,(req , res , next ) => {
 >>>>>>> d0a24d45f18a28cfc0fc6da57ff23bce7763ac32
 
 
+<<<<<<< HEAD
+=======
+})    
+
+router.get('/restaurantes' ,(req , res , next) => {
+    try {
+        res.render('restaurantes'); 
+        
+    } catch (error) {
+        console.log(error)
+        
+    }
+})
+
+
+>>>>>>> ac47d63da614a24f112ff2f4dbcbc4b5ecca85a9
 
 
 module.exports = router
