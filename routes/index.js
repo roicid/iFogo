@@ -13,17 +13,7 @@ const User =require('../models/user')
 
   
 
-    router.get('/books' ,(req , res , next ) => {
-    
-      restaurantes.find().limit(10)
-      .then((result) => {
-          console.log(result)
-          res.render('dale', {data: result})
-      }).catch((err) => {
-          console.log(err)
-      });
-  })
-
+   
 
 
 
