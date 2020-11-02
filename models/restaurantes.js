@@ -1,9 +1,9 @@
-
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const restauranteSchema = new Schema(
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -13,6 +13,9 @@ const restauranteSchema = new Schema(
 =======
     
 >>>>>>> master
+=======
+    
+>>>>>>> rama-alex
     Nombre: String,
     Direccion: String,
     Email: String,
@@ -20,7 +23,6 @@ const restauranteSchema = new Schema(
     URLReal:String
     
 
->>>>>>> d0a24d45f18a28cfc0fc6da57ff23bce7763ac32
   },
   {
     timestamps: true

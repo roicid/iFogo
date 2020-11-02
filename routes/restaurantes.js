@@ -1,16 +1,13 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const Restaurante =require('../models/restaurantes')
-const withAuth = require('../helpers/middleware');
+const Restaurante = require("../models/restaurantes");
+const withAuth = require("../helpers/middleware");
+const uploadCloud = require("../config/cloudinary");
 
-// consultar a dani para mostrar varios !! 
-//problemas con el json 
+// consultar a dani para mostrar varios !!
+//problemas con el json
 
 <<<<<<< HEAD
-=======
-
-router.get('/buscadorPrincipal' , async (req , res , next ) => {
-  //  const {Nombre , Direccion} = req.body
       
         
         try {
@@ -38,37 +35,52 @@ router.get('/buscadorPrincipal' , async (req , res , next ) => {
             
 >>>>>>> master
 
-
-<<<<<<< HEAD
 =======
-})    
+>>>>>>> rama-alex
 
-router.get('/restaurantes' ,(req , res , next) => {
+  try {
+    const consulta = await Restaurante.find({
+      Nombre: { $regex: req.query.buscador, $options: "i" },
+    });
+    //console.log(req.query.buscador)
+    // console.log(consulta);
+    res.render("index", { data: consulta });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.get("/restaurantes", (req, res, next) => {
+  try {
+    res.render("restaurantes");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.post(
+  "/restaurantesform",
+  uploadCloud.single("Foto1"),
+  async (req, res, next) => {
+    const { Nombre, Direccion, URLReal, Email } = req.body;
+    const Foto1 = req.file.url;
+    const imgName = req.file.originalname;
+
     try {
-        res.render('restaurantes'); 
-        
+      const nuevoRestaurante = await Restaurante.create({
+        Nombre,
+        Direccion,
+        URLReal,
+        Foto1,
+        Email,
+        imgName,
+      });
+
+      res.render("bienvenidoRestaurante", { nuevoRestaurante });
     } catch (error) {
-        console.log(error)
-        
+      console.log(error);
     }
-})
+  }
+);
 
-router.post('/restaurantesform', async(req,res,next) =>  {
-
-    const { Nombre , Direccion , URLReal , Foto1 , Email} = req.body;
-
-try { 
-     await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email})
-    
-    
-    res.redirect('/')
-} catch (error) {
-    console.log(error)
-    
-}
-})
-
->>>>>>> ac47d63da614a24f112ff2f4dbcbc4b5ecca85a9
-
-
-module.exports = router
+module.exports = router;

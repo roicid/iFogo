@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const restaurantes =require('../models/restaurantes')
 const withAuth = require('../helpers/middleware')
-const User =require('../models/user')
+const uploadCloud = require('../config/cloudinary')
 
 /*restaurantes.find()
   .then((restaurantes) => {
@@ -13,17 +13,10 @@ const User =require('../models/user')
 
   
 
-    router.get('/books' ,(req , res , next ) => {
-    
-      restaurantes.find().limit(10)
-      .then((result) => {
-          console.log(result)
-          res.render('dale', {data: result})
-      }).catch((err) => {
-          console.log(err)
-      });
+   
+  router.get('/' , (req,res,next) => {
+    res.render('index')
   })
-
 
 
 
