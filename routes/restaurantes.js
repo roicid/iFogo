@@ -12,7 +12,6 @@ router.get('/buscadorPrincipal' ,(req , res , next ) => {
         restaurantes.find().limit(3)
         
         .then((result) => {
-          
     
             res.render('index' , {data : result} )
            console.log(result);
