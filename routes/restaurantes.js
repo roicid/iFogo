@@ -21,7 +21,19 @@ router.get('/buscadorPrincipal' ,(req , res , next ) => {
         });
 
 
-}) 
+})    
+
+router.get('/restaurantes' ,(req , res , next) => {
+    try {
+        res.render('restaurantes'); 
+        
+    } catch (error) {
+        console.log(error)
+        
+    }
+})
+
+
 
 
 module.exports = router
