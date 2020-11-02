@@ -7,17 +7,17 @@
 <form id ="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
 
 <label for="buscador">          </label>
-<input type="text" name ="buscador" value="" id=""> 
+<input type="text" name ="buscador" value="" id="buscador"> 
 <button class="boton-Buscador"> Buscar </button>
  </form>
 
  <div > {{#each data}}   
 
      <p> Nombre :  {{this.Nombre}}</p>
-     <img src="{{this.[Foto_1]}}"> 
-     <img src="{{this.[Foto_2]}}">
+     <img src="{{this.[Foto1]}}"> 
+     <img src="{{this.[Foto2]}}">
      <p> Mail :  {{this.Email}}</p>
-     <p> direccion : {{this.Dirección}} </p>
+     <p> direccion : {{this.Direccion}} </p>
 
      
 {{/each }}
