@@ -7,6 +7,8 @@ const uploadCloud = require("../config/cloudinary");
 // consultar a dani para mostrar varios !!
 //problemas con el json
 
+router.get("/buscadorPrincipal", async (req, res, next) => {
+  //  const {Nombre , Direccion} = req.body
 <<<<<<< HEAD
       
         
