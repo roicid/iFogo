@@ -14,6 +14,9 @@ const uploadCloud = require('../config/cloudinary')
   
 
    
+  router.get('/' , (req,res,next) => {
+    res.render('index')
+  })
 
 
 
