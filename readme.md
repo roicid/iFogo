@@ -30,3 +30,5 @@ readme.md
 
 ### Slides 
 <a href ="https://docs.google.com/presentation/d/1t5XIYpkQcmCIwbR__l7ZdfWHBoaVrwnLE3FTacHCrao/edit#slide=id.p">
+
+[SLIDES FOOGO](https://docs.google.com/presentation/d/1t5XIYpkQcmCIwbR__l7ZdfWHBoaVrwnLE3FTacHCrao/edit#slide=id.p)
