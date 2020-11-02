@@ -7,18 +7,25 @@ const withAuth = require('../helpers/middleware');
 //problemas con el json 
 
 
-router.get('/buscadorPrincipal' ,(req , res , next ) => {
+router.get('/buscadorPrincipal' , async (req , res , next ) => {
   //  const {Nombre , Direccion} = req.body
-        restaurantes.find().limit(3)
+      
         
-        .then((result) => {
+        try {
+            const consulta = await Restaurante.find({Nombre : {$regex: req.query.buscador, $options:"i"}});
+            console.log(req.query.buscador)
+            console.log(consulta);
+            res.render('index' , {data : consulta} )
+           
+        
+            
+        } catch (error) {
+            console.log(error)
+            
+        }
           
     
-            res.render('index' , {data : result} )
-           console.log(result);
-        }).catch((err) => {
-            console.log(err)
-        });
+            
 
 
 })    
