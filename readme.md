@@ -27,3 +27,6 @@ readme.md
 
 
 ![alt text](C:\Users\MSI\Desktop\iFogo-readme\public\images\wireframes-iFoGo.jpg "Logo Title Text 1")
+
+### Slides 
+<a href ="https://docs.google.com/presentation/d/1t5XIYpkQcmCIwbR__l7ZdfWHBoaVrwnLE3FTacHCrao/edit#slide=id.p">
