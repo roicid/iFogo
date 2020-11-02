@@ -10,17 +10,17 @@
     <button class="boton-Buscador"> Buscar </button>
 </form>
 
-<div> {{#each data}}
+<div class="restaurantesTotal"> 
+     {{#each data}}
+   <div class="individual">
 
-    <p> Nombre : {{this.Nombre}}</p>
-    <img src="{{this.[Foto1]}}">
-    <img src="{{this.[Foto2]}}">
-    <p> Mail : {{this.Email}}</p>
-    <p> direccion : {{this.Direccion}} </p>
-
-
-    {{/each }}
-
+    <p class="nombre"> Nombre : {{this.Nombre}}</p>
+    <img src="{{this.[Foto1]}}" class="imageone">
+    <img src="{{this.[Foto2]}}" class="imagetwo">
+    <p class="email"> Mail : {{this.Email}}</p>
+    <p class="direccion"> direccion : {{this.Direccion}} </p>
+</div> 
+ {{/each }}
 </div>
 
 <h2> Vendes comida Take Away y deseas Colaborar ? </h2>
