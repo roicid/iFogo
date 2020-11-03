@@ -5,7 +5,6 @@ const withAuth = require("../helpers/middleware");
 const uploadCloud = require("../config/cloudinary");
 const User = require("../models/user");
 
-
 // consultar a dani para mostrar varios !!
 //problemas con el json
 
@@ -54,9 +53,27 @@ router.post(
     } catch (error) {
       console.log(error);
     }
+  }
+);
 
-  });
+router.post("/business-add/:id", withAuth, async (req, res, next) => {
+  const idbusiness = req.params.id;
+  const iduser = req.user._id;
+  try {
+    const userfind = await User.findByIdAndUpdate(
+      iduser,
+      { $push: { restaurantes: idbusiness } },
+      { new: true }
+    ).populate("restaurantes");
+    console.log(userfind);
+    res.render("secret", { restas: userfind });
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+});
 
+<<<<<<< HEAD
   router.post('/business-add/:id', withAuth , async (req,res,next) => {
     const idbusiness = req.params.id 
     const iduser = req.user._id
@@ -65,32 +82,30 @@ router.post(
      console.log(userfind)
       res.render('secret' ,  userfind)
       
-
-      
-    } catch (error) {
-      console.log(error)
-      next(error)
-      
-    }
-
-
-
-  }) 
-
-router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
-
-    const { Nombre , Direccion , URLReal , Email} = req.body;
-    const Foto1  = req.file.url;
+=======
+router.post(
+  "/restaurantesform",
+  uploadCloud.single("Foto1"),
+  async (req, res, next) => {
+    const { Nombre, Direccion, URLReal, Email } = req.body;
+    const Foto1 = req.file.url;
     const imgName = req.file.originalname;
-    
+>>>>>>> 5f83c5dbf1031445ebffe66bd44124eb63e1d97f
 
-try { 
-     const nuevoRestaurante = await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email, imgName})
-    res.render('bienvenidoRestaurante' , {nuevoRestaurante});
-} catch(error) {
-    console.log(error)
-    
-}
-})
+    try {
+      const nuevoRestaurante = await Restaurante.create({
+        Nombre,
+        Direccion,
+        URLReal,
+        Foto1,
+        Email,
+        imgName,
+      });
+      res.render("bienvenidoRestaurante", { nuevoRestaurante });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+);
 
 module.exports = router;
