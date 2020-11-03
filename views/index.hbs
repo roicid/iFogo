@@ -1,6 +1,13 @@
 <p> Bienvenido A iFogo </p>
 
 <p> La aplicacion de Food-to-Go que tanto buscabas </p>
+{{#if isUserLoggedIn}}
+<div>
+  <h2> Bienvenido {{user.email}}</h2>
+</div>
+{{/if}}
+
+ 
 
 
 <form id="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
@@ -10,9 +17,17 @@
     <button class="boton-Buscador"> Buscar </button>
 </form>
 
+
+
+
+
+
+
+
 <div class="restaurantesTotal"> 
      {{#each data}}
    <div class="individual">
+
 
     <p class="nombre"> Nombre : {{this.Nombre}}</p>
     <img src="{{this.[Foto1]}}" class="imageone">
