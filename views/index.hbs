@@ -3,16 +3,13 @@
 <p> La aplicacion de Food-to-Go que tanto buscabas </p>
 {{#if isUserLoggedIn}}
 <div>
-  <h2> Bienvenido {{user.email}}</h2>
+  <h2> Bienvenido {{currentUserInfo.email}}</h2>
 </div>
 {{/if}}
 
  
 
 
-{{#if currentUserInfo }}
-<div class="welcome-message">Welcome {{currentUserInfo.email}}! You're logged in! </div>
-{{/if}}
 
 {{#if message }}
 <div class="welcome-message">Thanks for Signing Up {{message}}! You can log in! </div>
