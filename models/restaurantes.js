@@ -3,19 +3,9 @@ const Schema = mongoose.Schema;
 
 const restauranteSchema = new Schema(
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    Email: String,
-    password: String
-=======
-=======
-    
->>>>>>> master
-=======
-    
->>>>>>> rama-alex
+
+   
+    password: String,
     Nombre: String,
     Direccion: String,
     Email: String,
