@@ -6,6 +6,7 @@ const uploadCloud = require("../config/cloudinary");
 
 
 router.get("/", withAuth ,(req, res, next) => {
+ 
   res.render("index");
 });
 

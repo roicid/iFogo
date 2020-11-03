@@ -5,10 +5,11 @@
 
 
 
-<p> La aplicacion  Food-to-Go que tanto buscabas </p>
+<p> Busca tus restaurantes por estilo de comida  </p>
+<p> comida rapida , internacional , parrilla , asiatica ,sushi  y mas !!</p>
 {{#if isUserLoggedIn}}
 
-  <h2> Bienvenido {{currentUserInfo.email}}</h2>
+  <h2> Bienvenido {{currentUserInfo.nombre}}</h2>
 
 {{/if}}
 
@@ -47,7 +48,10 @@
     <img src="{{this.[Foto1]}}" class="imageone">
     <img src="{{this.[Foto2]}}" class="imagetwo">
     <p class="email"> Mail : {{this.Email}}</p>
-    <p class="direccion"> direccion : {{this.Direccion}} </p>
+    <p class="direccion"> Direccion : {{this.Direccion}} </p>
+    <form method="POST" action="/business-add/{{this.id}}"> 
+    <button type="submit" >  agregar restaurante </button> 
+    </form>
 </div> 
  {{/each }}
 </div>
