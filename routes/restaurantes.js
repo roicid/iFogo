@@ -52,13 +52,9 @@ router.post(
     } catch (error) {
       console.log(error);
     }
-<<<<<<< HEAD
-})
-=======
 
   });
 
->>>>>>> 99689b02fdafc34a0bac1bd1c38113329a1f971c
 
 router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 
@@ -76,9 +72,4 @@ try {
 }
 })
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99689b02fdafc34a0bac1bd1c38113329a1f971c
 module.exports = router;
