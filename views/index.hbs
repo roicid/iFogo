@@ -3,11 +3,21 @@
 <p> La aplicacion de Food-to-Go que tanto buscabas </p>
 {{#if isUserLoggedIn}}
 <div>
-  <h2> Bienvenido {{user.email}}</h2>
+  <h2> Bienvenido {{currentUserInfo.email}}</h2>
 </div>
 {{/if}}
 
  
+
+
+
+{{#if message }}
+<div class="welcome-message">Thanks for Signing Up {{message}}! You can log in! </div>
+{{/if}}
+
+{{#if errorMessage }}
+<div class="error-message">{{ errorMessage }}</div>
+{{/if}} 
 
 
 <form id="buscadorPrincipal" action="/buscadorPrincipal" method="GET">
