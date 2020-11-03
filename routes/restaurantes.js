@@ -75,6 +75,4 @@ try {
 })
 
 
->>>>>>> master
-
 module.exports = router;
