@@ -3,6 +3,8 @@ var router = express.Router();
 const Restaurante = require("../models/restaurantes");
 const withAuth = require("../helpers/middleware");
 const uploadCloud = require("../config/cloudinary");
+const User = require("../models/user");
+
 
 // consultar a dani para mostrar varios !!
 //problemas con el json
@@ -12,7 +14,7 @@ router.get("/buscadorPrincipal", async (req, res, next) => {
 
   try {
     const consulta = await Restaurante.find({
-      Nombre: { $regex: req.query.buscador, $options: "i" },
+      Estilo: { $regex: req.query.buscador, $options: "i" },
     }).limit(5);
     //console.log(req.query.buscador)
     // console.log(consulta);
@@ -55,6 +57,25 @@ router.post(
 
   });
 
+  router.post('/business-add/:id', withAuth , async (req,res,next) => {
+    const idbusiness = req.params.id 
+    const iduser = req.user._id
+    try { 
+      const userfind = await  User.findByIdAndUpdate( iduser ,{$push :{restaurantes : idbusiness}} , { new : true}).populate('restaurantes');
+     console.log(userfind)
+      res.render('secret' , {restas: userfind})
+      
+
+      
+    } catch (error) {
+      console.log(error)
+      next(error)
+      
+    }
+
+
+
+  }) 
 
 router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 

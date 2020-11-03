@@ -21,7 +21,7 @@ router.get("/signup", (req, res, next) => {
 
 router.post("/signup", async (req, res, next) => {
   // desestructuramos el email y el password de req.body
-  const { email, password } = req.body;
+  const { nombre, email, password } = req.body;
 
   if (req.email === "" || password === "") {
     res.render("auth/signup", {
@@ -47,6 +47,7 @@ router.post("/signup", async (req, res, next) => {
 
     // creamos el usuario y luego redirigimos a '/'
     await User.create({
+      nombre,
       email,
       password: hashPass,
     });
