@@ -73,28 +73,5 @@ router.post("/business-add/:id", withAuth, async (req, res, next) => {
   }
 });
 
-router.post(
-  "/restaurantesform",
-  uploadCloud.single("Foto1"),
-  async (req, res, next) => {
-    const { Nombre, Direccion, URLReal, Email } = req.body;
-    const Foto1 = req.file.url;
-    const imgName = req.file.originalname;
-
-    try {
-      const nuevoRestaurante = await Restaurante.create({
-        Nombre,
-        Direccion,
-        URLReal,
-        Foto1,
-        Email,
-        imgName,
-      });
-      res.render("bienvenidoRestaurante", { nuevoRestaurante });
-    } catch (error) {
-      console.log(error);
-    }
-  }
-);
 
 module.exports = router;

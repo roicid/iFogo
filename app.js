@@ -5,6 +5,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+<<<<<<< HEAD
+=======
+var hbs = require('hbs');
+
+
+
+>>>>>>> master
 const mongoose = require("mongoose");
 
 mongoose
@@ -21,6 +28,7 @@ mongoose
     console.error("Error connecting to mongo", err);
   });
 
+
 var indexRouter = require('./routes/index');
 var authRouter = require('./routes/auth');
 var restaRouter = require('./routes/restaurantes');
@@ -31,6 +39,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(logger('dev'));
 app.use(express.json());
