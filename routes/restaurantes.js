@@ -63,7 +63,7 @@ router.post(
     try { 
       const userfind = await  User.findByIdAndUpdate( iduser ,{$push :{restaurantes : idbusiness}} , { new : true}).populate('restaurantes');
      console.log(userfind)
-      res.render('secret' , {restas: userfind})
+      res.render('secret' ,  userfind)
       
 
       
