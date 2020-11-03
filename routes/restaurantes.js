@@ -74,5 +74,8 @@ try {
 }
 })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 module.exports = router;
