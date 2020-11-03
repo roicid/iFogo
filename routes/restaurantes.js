@@ -52,24 +52,33 @@ router.post(
     } catch (error) {
       console.log(error);
     }
+<<<<<<< HEAD
 })
+=======
+
+  });
+
+>>>>>>> 99689b02fdafc34a0bac1bd1c38113329a1f971c
 
 router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 
     const { Nombre , Direccion , URLReal , Email} = req.body;
-    const Foto1  = req.file.url
+    const Foto1  = req.file.url;
     const imgName = req.file.originalname;
     
 
 try { 
      const nuevoRestaurante = await Restaurante.create({Nombre,Direccion,URLReal,Foto1, Email, imgName})
     res.render('bienvenidoRestaurante' , {nuevoRestaurante});
-} catch (error) {
+} catch(error) {
     console.log(error)
     
 }
 })
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 99689b02fdafc34a0bac1bd1c38113329a1f971c
 module.exports = router;

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+<<<<<<< HEAD
 const restauranteSchema = new Schema(
   {
 
@@ -12,12 +13,22 @@ const restauranteSchema = new Schema(
     Foto1: String,
     URLReal:String
     
+=======
+const restauranteSchema = new Schema({
+>>>>>>> 99689b02fdafc34a0bac1bd1c38113329a1f971c
 
-  },
-  {
-    timestamps: true
-  }
-);
+
+  Password: String,
+  Nombre: String,
+  Direccion: String,
+  Email: String,
+  Foto1: String,
+  URLReal: String
+
+
+}, {
+  timestamps: true
+});
 
 const Restaurante = mongoose.model('Restaurante', restauranteSchema);
 
