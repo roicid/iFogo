@@ -52,10 +52,10 @@ router.post(
     } catch (error) {
       console.log(error);
     }
-<<<<<<< HEAD
+
   }
 );
-=======
+
 })
 
 router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
