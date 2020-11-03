@@ -5,13 +5,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-<<<<<<< HEAD
-=======
 var hbs = require('hbs');
 
 
 
->>>>>>> master
 const mongoose = require("mongoose");
 
 mongoose
