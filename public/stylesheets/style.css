@@ -97,9 +97,9 @@ nav .wrapper a:hover{
 }
 
 /* NOSOTROS */
-.restaurantes{
+
  
-}
+
 .individual{
   border: 1px solid black;
   padding: 2%;
@@ -112,3 +112,44 @@ nav .wrapper a:hover{
 .imagetwo{
   width: 10%;
 }
+<<<<<<< HEAD
+=======
+
+.logofoogo{
+  width: 25%;
+  margin: -5% auto 0 auto;
+  display:block
+
+
+  
+}
+.textoBienvenida{
+  width: 25%;
+  text-align: center;
+  margin: 0 auto 10% auto;
+  display:block;
+  line-height: 30px;
+  
+
+}
+
+.buscador{
+
+  width: 25%;
+  text-align: center;
+  margin: -10% auto 10% auto;
+  display:block;
+ 
+  
+
+}
+
+.mensajefinalindex{
+  width: 40%;
+  text-align: center;
+  margin: 0 auto 10% auto;
+  display:block;
+ 
+
+}
+>>>>>>> intermedia
