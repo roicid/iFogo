@@ -1,6 +1,13 @@
 <p> Bienvenido A iFogo </p>
 
 <p> La aplicacion de Food-to-Go que tanto buscabas </p>
+{{#if isUserLoggedIn}}
+<div>
+  <h2> Bienvenido {{user.email}}</h2>
+</div>
+{{/if}}
+
+ 
 
 
 {{#if currentUserInfo }}
