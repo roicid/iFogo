@@ -11,18 +11,20 @@
     <button type="submit" > Realizar Compra</button> 
     </form>
 </div>  --}}
-
-<div class="card" style="width: 18rem;">
+<div class="alex">
+<div class="card m-2" style="width: 18rem;">
   <img src="{{this.[Foto1]}}" class="card-img-top" alt="FOTO1">
   <div class="card-body">
-    <h5 class="card-title">Nombre : {{this.Nombre}}</h5>
-    <p class="card-text">
-       Direccion : {{this.Direccion}}
+    <h5 class="card-title text-center">{{this.Nombre}}</h5>
+    <p class="card-text text-center">
+      {{this.Direccion}}
     </p>
     <form method="POST" action="/business-add/{{this.id}}"> 
-    <button type="submit" > Realizar Compra</button>
+    <button type="submit" class="roi btn btn-dark"> Realizar Compra</button>
   </div>
 </div>
+</div>
+
 
  {{/each }}
 
