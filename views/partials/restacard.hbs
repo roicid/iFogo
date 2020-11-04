@@ -1,5 +1,5 @@
  {{#each data}}
-   <div class="individual">
+   {{!-- <div class="individual">
 
 
     <p class="nombre"> Nombre : {{this.Nombre}}</p>
@@ -10,5 +10,20 @@
     <form method="POST" action="/business-add/{{this.id}}"> 
     <button type="submit" > Realizar Compra</button> 
     </form>
-</div> 
+</div>  --}}
+
+<div class="card" style="width: 18rem;">
+  <img src="{{this.[Foto1]}}" class="card-img-top" alt="FOTO1">
+  <div class="card-body">
+    <h5 class="card-title">Nombre : {{this.Nombre}}</h5>
+    <p class="card-text">
+       Direccion : {{this.Direccion}}
+    </p>
+    <form method="POST" action="/business-add/{{this.id}}"> 
+    <button type="submit" > Realizar Compra</button>
+  </div>
+</div>
+
  {{/each }}
+
+ 
