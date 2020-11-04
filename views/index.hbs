@@ -1,15 +1,14 @@
 
 <img class="logofoogo" src="images\foogo_logo.png">
 <div class= "textoBienvenida">
-<p> Bienvenido A FooGo </p>
-
-
-
-<p> Busca tus restaurantes por estilo de comida  </p>
-<p> Comida Rápida, Internacional, Parrilla, Asiatica, Sushi  y más !!</p>
+<p>
+   ¡Bienvenido A FooGo!<br>
+   Busca tus restaurantes por estilo de comida:
+    Rápida, Internacional, Parrilla, Asiatica, Sushi  y más !!
+ </p>
 {{#if isUserLoggedIn}}
 
-  <h2> Bienvenido {{currentUserInfo.nombre}}</h2>
+  <h2> Bienvenido, {{currentUserInfo.nombre}}</h2>
 
 {{/if}}
  </div>
@@ -57,6 +56,6 @@
 </div>
 <div class="mensajefinalindex" > 
 <h2> Vendes comida Take Away y deseas Colaborar ? </h2>
-<a href="./restaurantes"> haz click aqui</a>
+<a href="./restaurantes" class="colaborar"> haz click aqui</a>
 
  </div>
