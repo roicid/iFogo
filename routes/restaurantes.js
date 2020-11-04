@@ -15,8 +15,8 @@ router.get("/buscadorPrincipal", async (req, res, next) => {
     const consulta = await Restaurante.find({
       Estilo: { $regex: req.query.buscador, $options: "i" },
     }).limit(5);
-    console.log(req.query.buscador);
-    console.log(consulta);
+    //console.log(req.query.buscador)
+    // console.log(consulta);
     res.render("index", { data: consulta });
   } catch (error) {
     console.log(error);
@@ -56,7 +56,6 @@ router.post(
   }
 );
 
-<<<<<<< HEAD
 router.post("/business-add/:id", withAuth, async (req, res, next) => {
   const idbusiness = req.params.id;
   const iduser = req.user._id;
@@ -73,8 +72,7 @@ router.post("/business-add/:id", withAuth, async (req, res, next) => {
     next(error);
   }
 });
-=======
-  });
+
 
   router.post('/business-add/:id', withAuth , async (req,res,next) => {
     const idbusiness = req.params.id 
@@ -96,13 +94,7 @@ router.post("/business-add/:id", withAuth, async (req, res, next) => {
 
   }) 
 
-router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 
-    const { Nombre , Direccion , URLReal , Email} = req.body;
-    const Foto1  = req.file.url;
-    const imgName = req.file.originalname;
-    
->>>>>>> rama-roi
 
 
 module.exports = router;
