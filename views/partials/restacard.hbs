@@ -1,0 +1,14 @@
+ {{#each data}}
+   <div class="individual">
+
+
+    <p class="nombre"> Nombre : {{this.Nombre}}</p>
+    <img src="{{this.[Foto1]}}" class="imageone">
+    <img src="{{this.[Foto2]}}" class="imagetwo">
+    <p class="email"> Mail : {{this.Email}}</p>
+    <p class="direccion"> Direccion : {{this.Direccion}} </p>
+    <form method="POST" action="/business-add/{{this.id}}"> 
+    <button type="submit" > Realizar Compra</button> 
+    </form>
+</div> 
+ {{/each }}
