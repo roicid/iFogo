@@ -152,3 +152,11 @@ nav .wrapper a:hover{
 .imageone{
   width: 30%;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 33px;
+  background-color: #262626;
+  color: rgb(255, 255, 255);
+}
