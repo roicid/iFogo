@@ -72,7 +72,7 @@ router.post("/login", async (req, res, next) => {
 
   // desestructuramos el email y el password de req.body
   const { email, password } = req.body;
-
+//
   try {
     // revisamos si el usuario existe en BD
     const user = await User.findOne({ email });
