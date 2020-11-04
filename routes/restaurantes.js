@@ -31,10 +31,7 @@ router.get("/restaurantes", (req, res, next) => {
   }
 });
 
-router.post(
-  "/restaurantesform",
-  uploadCloud.single("Foto1"),
-  async (req, res, next) => {
+router.post(  "/restaurantesform",  uploadCloud.single("Foto1"),  async (req, res, next) => {
     const { Nombre, Direccion, URLReal, Email } = req.body;
     const Foto1 = req.file.url;
     const imgName = req.file.originalname;
@@ -56,7 +53,7 @@ router.post(
   }
 );
 
-  ;
+  
 
   router.post('/business-add/:id', withAuth , async (req,res,next) => {
     const idbusiness = req.params.id 
@@ -78,12 +75,7 @@ router.post(
 
   }) 
 
-router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 
-    const { Nombre , Direccion , URLReal , Email} = req.body;
-    const Foto1  = req.file.url;
-    const imgName = req.file.originalname;
-    
 
 
 module.exports = router;
