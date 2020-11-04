@@ -56,6 +56,7 @@ router.post(
   }
 );
 
+<<<<<<< HEAD
 router.post("/business-add/:id", withAuth, async (req, res, next) => {
   const idbusiness = req.params.id;
   const iduser = req.user._id;
@@ -72,6 +73,36 @@ router.post("/business-add/:id", withAuth, async (req, res, next) => {
     next(error);
   }
 });
+=======
+  });
+
+  router.post('/business-add/:id', withAuth , async (req,res,next) => {
+    const idbusiness = req.params.id 
+    const iduser = req.user._id
+    try { 
+        await  User.findByIdAndUpdate( iduser ,{$push :{restaurantes : idbusiness}} , { new : true})
+     
+      res.redirect('/secret')
+      
+
+      
+    } catch (error) {
+      console.log(error)
+      next(error)
+      
+    }
+
+
+
+  }) 
+
+router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
+
+    const { Nombre , Direccion , URLReal , Email} = req.body;
+    const Foto1  = req.file.url;
+    const imgName = req.file.originalname;
+    
+>>>>>>> rama-roi
 
 
 module.exports = router;

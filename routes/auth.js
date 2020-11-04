@@ -105,10 +105,13 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.get("/secret", withAuth, (req, res, next) => {
+router.get("/secret", withAuth, async (req, res, next) =>  {
   // si existe req.user, quiere decir que el middleware withAuth ha devuelto el control a esta ruta y renderizamos la vista secret con los datos del user
   if (req.user) {
-    res.render("secret", { user: req.user });
+    const actualUser = await User.findById(req.user._id).populate('restaurantes')
+    console.log('hola', req.user, "hola") 
+   
+    res.render("secret", { user: actualUser });
   } else {
     res.redirect("/");
   }
