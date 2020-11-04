@@ -31,10 +31,7 @@ router.get("/restaurantes", (req, res, next) => {
   }
 });
 
-router.post(
-  "/restaurantesform",
-  uploadCloud.single("Foto1"),
-  async (req, res, next) => {
+router.post(  "/restaurantesform",  uploadCloud.single("Foto1"),  async (req, res, next) => {
     const { Nombre, Direccion, URLReal, Email } = req.body;
     const Foto1 = req.file.url;
     const imgName = req.file.originalname;
@@ -56,25 +53,7 @@ router.post(
   }
 );
 
-<<<<<<< HEAD
-router.post("/business-add/:id", withAuth, async (req, res, next) => {
-  const idbusiness = req.params.id;
-  const iduser = req.user._id;
-  try {
-    const userfind = await User.findByIdAndUpdate(
-      iduser,
-      { $push: { restaurantes: idbusiness } },
-      { new: true }
-    ).populate("restaurantes");
-    console.log(userfind);
-    res.render("secret", { restas: userfind });
-  } catch (error) {
-    console.log(error);
-    next(error);
-  }
-});
-=======
-  });
+  
 
   router.post('/business-add/:id', withAuth , async (req,res,next) => {
     const idbusiness = req.params.id 
@@ -96,13 +75,7 @@ router.post("/business-add/:id", withAuth, async (req, res, next) => {
 
   }) 
 
-router.post('/restaurantesform', uploadCloud.single('Foto1'), async(req,res,next) =>  {
 
-    const { Nombre , Direccion , URLReal , Email} = req.body;
-    const Foto1  = req.file.url;
-    const imgName = req.file.originalname;
-    
->>>>>>> rama-roi
 
 
 module.exports = router;
