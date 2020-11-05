@@ -5,9 +5,8 @@
 }
 
 body {
-  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #DFDECA;
+  
 }
 a {
   color: #00b7ff;
@@ -101,7 +100,7 @@ nav .wrapper a:hover{
  
 
 .individual{
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 2%;
   margin: 2%;
   width: 50%;
@@ -115,7 +114,7 @@ nav .wrapper a:hover{
 
 .logofoogo{
   width: 25%;
-  margin: -5% auto 0 auto;
+  margin: -20px auto 0 auto;
   display:block
 
 
@@ -128,15 +127,13 @@ nav .wrapper a:hover{
   display:block;
   line-height: 30px;
   font-size: 14pt;
-  
-
 }
 
 
 .mensajefinalindex{
   width: 40%;
   text-align: center;
-  margin: 5% auto 10% auto;
+  margin: 5% auto 1% auto;
 }
 .mensajefinalindex > a {
   text-decoration: none;
@@ -147,34 +144,37 @@ nav .wrapper a:hover{
   margin-top: 10%;
 }
 .imageone{
-  width: 30%;
+  
+  width: 25%;
 }
 /* FOOTER */
 
 footer {
   display: flex;
   justify-content: space-between;
-  padding: 33px;
+  padding: 1% 0 1% 0;
   background-color: #262626;
   color: rgb(255, 255, 255);
+  
+ 
 
 }
 
 .boton-Buscador{
+  width: 10%;
   background-color: #262626;
+  padding: 1% 1% 0.4% 0.6%;
   color: #fff;
-  padding: 1.8%;
-  border-radius: 10%;
+  border-radius: 9px;
   margin: 0 0 0 0;
-  font-size: 1.3em;
-  
+  font-size: 1.2em;
 }
 #buscador{
   width: 50%;
-  padding: 1.9%;
+  padding: 0%;
   text-align: center;
-  margin: 0 auto 0 20%;
-  font-size: 1rem;
+  margin: -5% auto 0 20%;
+  font-size: 2rem;
  border: 1px solid black;
  border-radius: 10px;
 }
@@ -190,5 +190,5 @@ footer {
 }
 
 .tarjeta{
-  margin-left: 30%;
+  margin-left: 30%; 
 }
