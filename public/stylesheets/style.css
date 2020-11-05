@@ -97,21 +97,6 @@ nav .wrapper a:hover{
 
 /* NOSOTROS */
 
- 
-
-.individual{
-  border: 1px solid #000;
-  padding: 2%;
-  margin: 2%;
-  width: 50%;
-}
-.imageone{
-  width: 80%;
-}
-.imagetwo{
-  width: 10%;
-}
-
 .logofoogo{
   width: 25%;
   margin: -20px auto 0 auto;
@@ -143,10 +128,34 @@ nav .wrapper a:hover{
 .colaborar{
   margin-top: 10%;
 }
+/* RestaCard partial */
+
+.individual{
+  border: 1px solid #000;
+  width: 30%;
+  margin: 30px auto 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.imagecaja{
+  width: 200%;
+  margin: 0 0 0 25%;
+}
+
+.infoCaja{
+  text-align: center;
+}
+
+.formCaja{
+  margin-left: 35%;
+}
+
 .imageone{
-  
   width: 25%;
 }
+
+
 /* FOOTER */
 
 footer {
@@ -168,6 +177,7 @@ footer {
   border-radius: 9px;
   margin: 0 0 0 0;
   font-size: 1.2em;
+
 }
 #buscador{
   width: 50%;

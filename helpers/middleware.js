@@ -28,7 +28,7 @@ const withAuth = async (req, res, next) => {
         // si hay un error, configuramos el valor de la variable isUserLoggedIn en false y pasamos el control a la siguiente ruta
         console.log(error)
         res.locals.isUserLoggedIn = false
-        next(error)
+        res.redirect('/index')
     }
 }
 
