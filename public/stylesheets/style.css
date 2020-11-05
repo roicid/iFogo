@@ -226,3 +226,29 @@ footer {
 .tarjeta{
   margin-left: 30%; 
 }
+
+/* IMAGEN COLABORAR */
+.imagenRestauranteAdd{
+  width: 30%;
+}
+
+/* MEDIA QUERY IPHONE  */
+
+@media (max-width: 375px) {
+  .footer{
+   height: 100vh;
+  }
+  /* .secretheight{
+    width: 100vh;
+    height: 100vh;
+  } */
+  .individual{
+    width: 50%;
+  }
+  .revisa{
+    font-size: 2em;
+    text-align: center;
+  }
+
+
+}

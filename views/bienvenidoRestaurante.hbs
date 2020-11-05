@@ -1,14 +1,14 @@
 <section class="secretheight">
-    <h1> BIENVENIDO {{nuevoRestaurante.Nombre}} </h1>
+    <h1> BIENVENIDO, {{nuevoRestaurante.Nombre}} </h1>
+<p class="revisa"> por favor revisa los datos  </p>
 <div class="individual">
-      <div class="imagecaja">
-
-<p> por favor revisa los datos  </p>
-<p> Direccion : {{nuevoRestaurante.Direccion}}</p>
-<p> E-Mail : {{nuevoRestaurante.Email}} </p>
-<p> Pagina web : {{nuevoRestaurante.URLReal}} </a></p>
-<img src="{{nuevoRestaurante.Foto1}}">
+<p>{{nuevoRestaurante.Direccion}}</p>
+<p> {{nuevoRestaurante.Email}} </p>
+<p> {{nuevoRestaurante.URLReal}} </a></p>
+<div class="imagecaja">
+    <img class="imagenRestauranteAdd" src="{{nuevoRestaurante.Foto1}}">
 </div>
+
 </div>
 </section>
 
