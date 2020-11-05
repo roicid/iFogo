@@ -361,4 +361,20 @@ and (-webkit-device-pixel-ratio : 3) {
   .account-message{
     text-align: center;
   }
+/* RENDERIZADO IMAGENES RESTAURANTE */
+  .restaurantesTotal{
+    width: 80vh;
+    margin: 0 0 0 -36%;
+    font-size: 3em;
+  }
+  .perfilCompras{
+   
+    font-size: 3em;
+  }
+  .perfilCompratake{
+    font-size: 4rem;
+  }
+  .perfilNombre{
+    font-size: 5rem;
+  }
 }
