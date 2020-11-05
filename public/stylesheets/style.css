@@ -118,9 +118,6 @@ nav .wrapper a:hover{
   width: 25%;
   margin: -20px auto 0 auto;
   display:block
-
-
-  
 }
 .textoBienvenida{
   width: 30%;
@@ -265,7 +262,7 @@ and (-webkit-device-pixel-ratio : 3) {
   #buscador{
     height: 4vh;
     font-size: 3em;
-    color: blue;
+    color: #b3001a;
   }
   nav{
     height: 8vh;
@@ -297,7 +294,71 @@ and (-webkit-device-pixel-ratio : 3) {
     text-align: center;
   }
 
+  /* FORM RESTAURANTES ADD */
+  .restaurantes{
+    width: 4vh;
+    
+   
+  }
+  #formRestaurantes{
+    width: 25vh;
+    height: 18vh;
+    font-size: 4em;
+    margin-left: -140%;
+    line-height: 180%;
+  }
+  #formRestaurantes > input{
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+  #formRestaurantes > .btn{
+    margin-bottom: -10%;
+    margin-left: 35%;
+   
+    height: 100px;
+    width: 300px;
+    font-size: 1em;
+  }
+  .agreRestaurantes{
+    margin-bottom: -40px;
+    margin-left: 35px;
+  }
 
+  .agreRestaurantes > h3{
+    font-size: 3.5em;
+  }
+  .agreRestaurantes > p{
+    font-size: 2.8em;
+  }
+  #form{
+    margin-top: 30%;
+  }
+  .secretheight{
+    overflow: hidden;
+  }
 
+  .secretRoi{
 
+   font-size: 4rem;
+  }
+  .secretRoi > form > input{
+    height: 80px;
+    width: 120%;
+  }
+  .submitSigUp{
+    height: 100px;
+    font-size: 3rem;
+    margin: 0 0 0 30px;
+  }
+  .textSing{
+    font-size: 2em;
+  }
+  .h2signup{
+    font-size: 3em;
+    text-align: center;
+    margin: 30px 0 0 0;
+  }
+  .account-message{
+    text-align: center;
+  }
 }
