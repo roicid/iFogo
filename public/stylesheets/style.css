@@ -41,7 +41,7 @@ a {
 }
 
 #form button {
-  background: #43a3e6;
+  background: #b3001a;
   border: 1px solid #43a3e6;
   border-radius: 4px;
   color: #fff;
@@ -59,6 +59,18 @@ a {
   background: #fff;
   color: #43a3e6;
   transition: 0.3s ease background;
+}
+/* PRUEBA INPUT */
+
+.pruebaInput{
+  width: 400px;
+  height: 60px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.submitSigUp{
+  margin: 40px 0 0 10px;
 }
 
 .error-message {
