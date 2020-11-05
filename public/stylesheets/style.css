@@ -118,9 +118,6 @@ nav .wrapper a:hover{
   width: 25%;
   margin: -20px auto 0 auto;
   display:block
-
-
-  
 }
 .textoBienvenida{
   width: 30%;
@@ -225,4 +222,159 @@ footer {
 
 .tarjeta{
   margin-left: 30%; 
+}
+
+/* IMAGEN COLABORAR */
+.imagenRestauranteAdd{
+  width: 30%;
+}
+
+/* MEDIA QUERY IPHONE  */
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .logofoogo{
+    width: 100%;
+  }
+  .footer{
+   height: 18vh;
+  }
+  footer > p{
+    font-size: 3em;
+    text-align: center;
+    margin: 5% 0 0 0;
+  }
+  .vendes{
+    font-size: 3em;
+    
+  }
+  .colaborarTexto{
+    font-size: 2em;
+  }
+
+  .boton-Buscador{
+    width: 10vh;
+    height: 4vh;
+    font-size: 2em;
+  }
+  #buscador{
+    height: 4vh;
+    font-size: 3em;
+    color: #b3001a;
+  }
+  nav{
+    height: 8vh;
+    font-size: 3em;
+    text-align: center;
+  }
+  .wrapper{
+    margin: 3% 0 0 0;
+  }
+
+  .textoBienvenida{
+    width: 100%;
+    font-size: 3.6em;
+    line-height: 1em;
+  }
+  .textoBienvenida > h2 {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+  /* .secretheight{
+    width: 100vh;
+    height: 100vh;
+  } */
+  .individual{
+    width: 50%;
+  }
+  .revisa{
+    font-size: 2em;
+    text-align: center;
+  }
+
+  /* FORM RESTAURANTES ADD */
+  .restaurantes{
+    width: 4vh;
+    
+   
+  }
+  #formRestaurantes{
+    width: 25vh;
+    height: 18vh;
+    font-size: 4em;
+    margin-left: -140%;
+    line-height: 180%;
+  }
+  #formRestaurantes > input{
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+  #formRestaurantes > .btn{
+    margin-bottom: -10%;
+    margin-left: 35%;
+   
+    height: 100px;
+    width: 300px;
+    font-size: 1em;
+  }
+  .agreRestaurantes{
+    margin-bottom: -40px;
+    margin-left: 35px;
+  }
+
+  .agreRestaurantes > h3{
+    font-size: 3.5em;
+  }
+  .agreRestaurantes > p{
+    font-size: 2.8em;
+  }
+  #form{
+    margin-top: 30%;
+  }
+  .secretheight{
+    overflow: hidden;
+  }
+
+  .secretRoi{
+
+   font-size: 4rem;
+  }
+  .secretRoi > form > input{
+    height: 80px;
+    width: 120%;
+  }
+  .submitSigUp{
+    height: 100px;
+    font-size: 3rem;
+    margin: 0 0 0 30px;
+  }
+  .textSing{
+    font-size: 2em;
+  }
+  .h2signup{
+    font-size: 3em;
+    text-align: center;
+    margin: 30px 0 0 0;
+  }
+  .account-message{
+    text-align: center;
+  }
+/* RENDERIZADO IMAGENES RESTAURANTE */
+  .restaurantesTotal{
+    width: 80vh;
+    margin: 0 0 0 -36%;
+    font-size: 3em;
+  }
+  .perfilCompras{
+   
+    font-size: 3em;
+  }
+  .perfilCompratake{
+    font-size: 4rem;
+  }
+  .perfilNombre{
+    font-size: 5rem;
+  }
 }

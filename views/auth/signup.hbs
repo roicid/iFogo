@@ -1,9 +1,7 @@
-
 <section class="secretheight">
+  <h2 class="h2signup">Sign Up</h2>
+  <div class="secretRoi">
 <form id="form" action="/signup" method="POST">
-            <h2>Sign Up</h2>
-   
-   
  <label for="nombre" >Nombre </label>
   <br />
 
@@ -18,11 +16,11 @@
 
   <input class="pruebaInput" type="password" name="password" placeholder="********" />
 
-  <button class="submitSigUp" type="submit">Create account</button>
+  <button class="submitSigUp" type="submit"><p class="textSing">Create account</p></button>
 </form>
-
+</div>
 {{#if errorMessage}}
 <div class="error-message">{{ errorMessage }}</div>
 {{/if}}
-
- </section>
+</section>
+ 
