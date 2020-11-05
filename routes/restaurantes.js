@@ -13,11 +13,16 @@ router.get("/buscadorPrincipal", async (req, res, next) => {
 
   try {
     const consulta = await Restaurante.find({
-      Estilo: { $regex: req.query.buscador, $options: "i" },
+      Estilo: {
+        $regex: req.query.buscador,
+        $options: "i"
+      },
     }).limit(5);
     //console.log(req.query.buscador)
     // console.log(consulta);
-    res.render("index", { data: consulta });
+    res.render("index", {
+      data: consulta
+    });
   } catch (error) {
     console.log(error);
   }
@@ -31,50 +36,77 @@ router.get("/restaurantes", (req, res, next) => {
   }
 });
 
-router.post(  "/restaurantesform",  uploadCloud.single("Foto1"),  async (req, res, next) => {
-    const { Nombre, Direccion, URLReal, Email } = req.body;
-    const Foto1 = req.file.url;
-    const imgName = req.file.originalname;
+router.post("/restaurantesform", uploadCloud.single("Foto1"), async (req, res, next) => {
+  const {
+    Nombre,
+    Direccion,
+    URLReal,
+    Email
+  } = req.body;
+  const Foto1 = req.file.url;
+  const imgName = req.file.originalname;
 
-    try {
-      const nuevoRestaurante = await Restaurante.create({
-        Nombre,
-        Direccion,
-        URLReal,
-        Foto1,
-        Email,
-        imgName,
-      });
+  try {
+    const nuevoRestaurante = await Restaurante.create({
+      Nombre,
+      Direccion,
+      URLReal,
+      Foto1,
+      Email,
+      imgName,
+    });
 
-      res.render("bienvenidoRestaurante", { nuevoRestaurante });
-    } catch (error) {
-      console.log(error);
-    }
+    res.render("bienvenidoRestaurante", {
+      nuevoRestaurante
+    });
+  } catch (error) {
+    console.log(error);
   }
-);
-
-  
-
-  router.post('/business-add/:id', withAuth , async (req,res,next) => {
-    const idbusiness = req.params.id 
-    const iduser = req.user._id
-    try { 
-        await  User.findByIdAndUpdate( iduser ,{$push :{restaurantes : idbusiness}} , { new : true})
-     
-      res.redirect('/secret')
-      
-
-      
-    } catch (error) {
-      console.log(error)
-      next(error)
-      
-    }
+});
 
 
 
-  }) 
+router.post('/business-add/:id', withAuth, async (req, res, next) => {
+  const idbusiness = req.params.id
+  const iduser = req.user._id
+  try {
+    await User.findByIdAndUpdate(iduser, {
+      $addToSet: {
+        restaurantes: idbusiness
+      }
+    }, {
+      new: true
+    })
 
+    res.redirect('/secret')
+  } catch (error) {
+    console.log(error)
+    next(error)
+  }
+})
+
+router.post('/delete/:id', withAuth, async (req, res, next) => {
+
+  const iduser = req.user._id
+  const idbusiness = req.params.id
+
+  try {
+    await User.findByIdAndUpdate(iduser, {
+        $pull: {
+          restaurantes: idbusiness
+        }
+      }, {
+        new: true
+
+      })
+    res.redirect('/secret');
+
+  } catch (error) {
+    console.log(error)
+    next(error)
+
+  }
+})
 
 
 

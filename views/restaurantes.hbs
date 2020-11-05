@@ -1,7 +1,10 @@
-<p> Vendes Comida Take Away y deseas colaborar? </p>
-<h3> Sube tu negocio a nuestra Base de Datos y preparate! </h3>
+<section class="agreRestaurantes">
+    <h3> Vendes Comida Take Away y deseas colaborar?  </h3>
+    <p> Sube tu negocio a nuestra Base de Datos y preparate!</p>
+</section>
 
 
+<div class="restaurantes">
 <form action="/restaurantesform" method="POST" id="formRestaurantes" enctype="multipart/form-data">
     <label for="Nombre">Nombre </label>
     <input id="Nombre" type="text" name="Nombre">
@@ -16,15 +19,14 @@
     <input id="URLReal" type="url" name="URLReal" placeholder="www.example.com">
 
     <label for="fotos"> Subir una Foto</label>
-    <input id="Foto1" type="file" name="Foto1" accept="image/png, image/jpeg">
+    <input class="btn-dark"id="Foto1" type="file" name="Foto1" accept="image/png, image/jpeg">
 
 
 
-    <button>Subir Datos</button>
+    <button class="btn btn-dark mt-2">Subir Datos</button>
 
     {{#if errorMessage }}
     <div class="error-message">{{ errorMessage }}</div>
     {{/if}}
-
-
 </form>
+</div>

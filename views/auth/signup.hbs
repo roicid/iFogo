@@ -1,3 +1,5 @@
+
+<section class="secretheight">
 <form id="form" action="/signup" method="POST">
             <h2>Sign Up</h2>
    
@@ -5,22 +7,22 @@
  <label for="nombre" >Nombre </label>
   <br />
 
-  <input type="string" name="nombre" placeholder="your name" />
+  <input class="pruebaInput" type="string" name="nombre" placeholder="your name" />
   <label for="email">Email</label>
   <br />
 
-  <input type="email" name="email" placeholder="Your email" />
+  <input class="pruebaInput" type="email" name="email" placeholder="Your email" />
 
   <label for="password">Password</label>
   <br />
 
-  <input type="password" name="password" placeholder="********" />
+  <input class="pruebaInput" type="password" name="password" placeholder="********" />
 
-  <button type="submit">Create account</button>
+  <button class="submitSigUp" type="submit">Create account</button>
 </form>
 
 {{#if errorMessage}}
 <div class="error-message">{{ errorMessage }}</div>
 {{/if}}
 
- 
+ </section>
