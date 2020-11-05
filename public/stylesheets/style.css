@@ -234,9 +234,56 @@ footer {
 
 /* MEDIA QUERY IPHONE  */
 
-@media (max-width: 375px) {
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) {
+  .logofoogo{
+    width: 100%;
+  }
   .footer{
-   height: 100vh;
+   height: 18vh;
+  }
+  footer > p{
+    font-size: 3em;
+    text-align: center;
+    margin: 5% 0 0 0;
+  }
+  .vendes{
+    font-size: 3em;
+    
+  }
+  .colaborarTexto{
+    font-size: 2em;
+  }
+
+  .boton-Buscador{
+    width: 10vh;
+    height: 4vh;
+    font-size: 2em;
+  }
+  #buscador{
+    height: 4vh;
+    font-size: 3em;
+    color: blue;
+  }
+  nav{
+    height: 8vh;
+    font-size: 3em;
+    text-align: center;
+  }
+  .wrapper{
+    margin: 3% 0 0 0;
+  }
+
+  .textoBienvenida{
+    width: 100%;
+    font-size: 3.6em;
+    line-height: 1em;
+  }
+  .textoBienvenida > h2 {
+    font-size: 1.5em;
+    font-weight: 300;
   }
   /* .secretheight{
     width: 100vh;
@@ -249,6 +296,8 @@ footer {
     font-size: 2em;
     text-align: center;
   }
+
+
 
 
 }
